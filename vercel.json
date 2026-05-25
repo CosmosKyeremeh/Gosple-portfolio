@@ -1,9 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs",
-  "env": {
-    "RESEND_API_KEY": "@resend_api_key",
-    "CONTACT_EMAIL_RECIPIENT": "borngreatcoszay@gmail.com"
-  }
+  "framework": "nextjs"
 }
