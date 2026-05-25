@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Home, User, Folder, BookOpen, Sigma, LineChart, Mail } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const links = [
   { href: '/',            label: 'Home',       icon: Home },
@@ -52,7 +53,12 @@ export default function Navbar() {
       </div>
 
       {/* 2. Navigation Menu (Fixed Floating Tablet Panel) */}
-      <nav className="fixed bottom-6 top-auto md:top-6 md:bottom-auto left-0 right-0 z-50 px-4 transition-all duration-300 pointer-events-none">
+      <motion.nav 
+        className="fixed bottom-6 top-auto md:top-6 md:bottom-auto left-0 right-0 z-50 px-4 transition-all duration-300 pointer-events-none"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+      >
         <div className="max-w-5xl mx-auto w-full flex justify-center md:justify-end">
           <div className="pointer-events-auto bg-slate-950/80 backdrop-blur-xl border border-slate-800/60 rounded-full p-1.5 shadow-[0_12px_40px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.02)] flex items-center gap-1 w-full md:w-max justify-around md:justify-end overflow-x-auto no-scrollbar">
             {links.map(({ href, label, icon: Icon }) => {
@@ -83,7 +89,7 @@ export default function Navbar() {
             })}
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
   )
 }

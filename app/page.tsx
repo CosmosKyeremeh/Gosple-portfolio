@@ -1,6 +1,8 @@
 ﻿import Link from 'next/link'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { getAllContent } from '@/lib/mdx'
+import AnimateIn from '@/components/ui/AnimateIn'
+import { StaggerContainer, StaggerItem } from '@/components/ui/Stagger'
 
 const mathAreas = [
   { sym: 'Σ', label: 'Discrete Mathematics', desc: 'Combinatorics, graph theory, formal proofs.', color: 'text-blue-400',   border: 'border-blue-400/10',   bg: 'bg-blue-400/5'   },
@@ -26,40 +28,44 @@ export default async function HomePage() {
       <section className="min-h-screen flex flex-col justify-center items-center px-4 relative">
         <div className="relative z-10 text-center max-w-4xl mx-auto space-y-8">
 
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700/50 bg-slate-900/60 backdrop-blur-sm text-xs font-mono text-slate-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            BSc. Computer Science & Engineering
-          </div>
+          <AnimateIn delay={0.1}>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700/50 bg-slate-900/60 backdrop-blur-sm text-xs font-mono text-slate-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              BSc. Computer Science & Engineering
+            </div>
+          </AnimateIn>
 
-          <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-tight text-slate-100 leading-[1.02]">
-            Gospel
-          </h1>
+          <AnimateIn delay={0.2}>
+            <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-tight text-slate-100 leading-[1.02]">
+              Gosple
+            </h1>
+          </AnimateIn>
 
-          <p className="font-serif text-xl md:text-2xl text-slate-400 italic max-w-xl mx-auto leading-relaxed">
-            Making mathematical thinking{' '}
-            <span className="text-amber-400 not-italic font-semibold">visible</span>.
-          </p>
+          <AnimateIn delay={0.3}>
+            <p className="font-serif text-xl md:text-2xl text-slate-400 italic max-w-xl mx-auto leading-relaxed">
+              Making mathematical thinking{' '}
+              <span className="text-amber-400 not-italic font-semibold">visible</span>.
+            </p>
+          </AnimateIn>
 
-          <p className="text-sm text-slate-600 font-mono max-w-md mx-auto">
-            Not shipping apps. Proving ideas.{' '}
-            <span className="text-slate-400">Every project is a proof of thought.</span>
-          </p>
+          <AnimateIn delay={0.4}>
+            <p className="text-sm text-slate-600 font-mono max-w-md mx-auto">
+              Not shipping apps. Proving ideas.{' '}
+              <span className="text-slate-400">Every project is a proof of thought.</span>
+            </p>
+          </AnimateIn>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500/10 border border-blue-500/25 text-blue-300 hover:bg-blue-500/20 hover:border-blue-400/40 font-mono text-sm transition-all duration-200 group"
-            >
-              View Projects
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-            </Link>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-700/50 text-slate-400 hover:text-slate-200 hover:border-slate-600 font-mono text-sm transition-all duration-200"
-            >
-              Read Insights
-            </Link>
-          </div>
+          <AnimateIn delay={0.5}>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+              <Link href="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500/10 border border-blue-500/25 text-blue-300 hover:bg-blue-500/20 hover:border-blue-400/40 font-mono text-sm transition-all duration-200 group">
+                View Projects
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+              <Link href="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-700/50 text-slate-400 hover:text-slate-200 hover:border-slate-600 font-mono text-sm transition-all duration-200">
+                Read Insights
+              </Link>
+            </div>
+          </AnimateIn>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
@@ -73,15 +79,18 @@ export default async function HomePage() {
           <p className="font-mono text-xs text-slate-600 uppercase tracking-widest">Areas of Study</p>
           <h2 className="font-serif text-3xl md:text-4xl text-slate-100 font-bold">What I think about</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {mathAreas.map(({ sym, label, desc, color, border, bg }) => (
-            <div key={label} className={`glass-panel-3d rounded-2xl p-6 space-y-3 border ${border} hover:scale-[1.02] transition-transform duration-200`}>
-              <div className={`text-4xl font-serif ${color}`}>{sym}</div>
-              <h3 className={`font-mono text-xs font-bold ${color}`}>{label}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{desc}</p>
-            </div>
+            <StaggerItem key={label}>
+              <div className={`glass-panel-3d rounded-2xl p-6 space-y-3 border ${border} hover:scale-[1.02] transition-transform duration-200`}>
+                <div className={`text-4xl font-serif ${color}`}>{sym}</div>
+                <h3 className={`font-mono text-xs font-bold ${color}`}>{label}</h3>
+                <p className="text-xs text-slate-600 leading-relaxed">{desc}</p>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </section>
 
       {/* ── Featured Projects ────────────────────────── */}
