@@ -7,7 +7,7 @@
 
 ## ✨ What This Is
 
-This is a personal portfolio platform built for a **Gosple & Cosmos** whose passion lies in mathematics — not in shipping consumer apps, but in the rigour of algorithms, the elegance of proofs, and the depth of computational thinking.
+This is a personal portfolio platform built for a **Gospel & Cosmos** whose passion lies in mathematics — not in shipping consumer apps, but in the rigour of algorithms, the elegance of proofs, and the depth of computational thinking.
 
 Rather than hiding that identity behind a generic list of CRUD projects, this platform **leads with it**. Every design and engineering decision is made to make the owner's mathematical thinking visible, credible, and genuinely impressive to recruiters, academics, and peers alike.
 
@@ -387,7 +387,7 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 ## 👤 Author
 
-**Frimpong Gosple Asamoah** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
+**Frimpong Gospel Asamoah** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
 
 ## 👤 Co-Author
 

@@ -1,6 +1,6 @@
 # 📐 Product Requirements Document (PRD)
 
-**Product Name:** Gosple Portfolio Platform  
+**Product Name:** Gospel Portfolio Platform  
 **Version:** 1.0 —  Architecture  
 **Document Status:** Active  
 **Last Updated:** April 2026

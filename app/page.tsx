@@ -32,7 +32,7 @@ export default async function HomePage() {
           </div>
 
           <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-tight text-slate-100 leading-[1.02]">
-            Gosple
+            Gospel
           </h1>
 
           <p className="font-serif text-xl md:text-2xl text-slate-400 italic max-w-xl mx-auto leading-relaxed">

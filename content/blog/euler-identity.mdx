@@ -1,6 +1,6 @@
 ---
 title: "Euler's Identity and the Geometry of Complex Exponentiation"
-excerpt: "Why e^(iπ)+1=0 is beautiful — not by memorizing it, but by understanding the rotation geometry beneath it."
+excerpt: "Why e^(iπ)+1=0 is beautiful — not by memorising it, but by understanding the rotation geometry beneath it."
 category: "Mathematical Analysis"
 date: "2026-05-20"
 tags: ["complex-analysis", "euler", "geometry"]
@@ -16,26 +16,20 @@ Five constants. One equation. But beauty without understanding is decoration.
 
 The Taylor expansion of $e^{i\theta}$ separates cleanly into real and imaginary parts:
 
-$$e^{i\theta} = \underbrace{\left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!} - \cdots\right)}_{\cos\theta} + i\underbrace{\left(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} - \cdots\right)}_{\sin\theta}$$
+$$e^{i\theta} = \cos\theta + i\sin\theta$$
 
-This is **Euler's Formula**: $e^{i\theta} = \cos\theta + i\sin\theta$.
+This is **Euler's Formula**. Setting $\theta = \pi$ gives $\cos\pi + i\sin\pi = -1 + 0i$.
 
-## Why $\theta = \pi$ Gives $-1$
-
-Setting $\theta = \pi$:
-
-$$e^{i\pi} = \cos\pi + i\sin\pi = -1 + 0i$$
-
-Geometrically: start at $(1, 0)$ on the unit circle, rotate by $\pi$ radians, land at $(-1, 0)$.
+Geometrically: start at $(1, 0)$ on the unit circle, rotate by $\pi$ radians, land exactly at $(-1, 0)$.
 
 $$e^{i\pi} + 1 = 0$$
 
-The identity is **not mysterious**. It is the algebraic statement of a half-turn.
+The identity is not mysterious. It is the algebraic statement of a half-turn.
 
 ## Why This Matters Computationally
 
 The Discrete Fourier Transform uses complex exponentials as its basis functions:
 
-$$X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-i \cdot 2\pi k n / N}$$
+$$X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-i 2\pi k n / N}$$
 
 Every frequency component is a rotating phasor. Euler's formula is why signal decomposition works.

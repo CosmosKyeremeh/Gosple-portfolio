@@ -29,8 +29,8 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Gosple — CS & Mathematics',
-    template: '%s | Gosple',
+    default: 'Gospel — CS & Mathematics',
+    template: '%s | Gospel',
   },
   description:
     'Proof of Thought — Exploring computational algorithms, discrete structures, and mathematical insight.',

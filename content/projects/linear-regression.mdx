@@ -1,12 +1,13 @@
 ---
 title: "Linear Regression as a Projection Problem"
-excerpt: "Regression is not statistics — it is geometry. Specifically, it is the orthogonal projection of a data vector onto the column space of a design matrix."
+excerpt: "Regression is not statistics — it is geometry. Specifically, the orthogonal projection of a data vector onto the column space of a design matrix."
 category: "Linear Algebra"
 date: "2026-05-15"
 tags: ["linear-algebra", "regression", "projections", "statistics"]
 ---
 
-Most introductions treat linear regression as curve-fitting. Viewed through linear algebra, it is something more precise: **a projection**.
+Most introductions treat linear regression as curve-fitting. Viewed through linear algebra,
+it is something more precise: **a projection**.
 
 ## The Setup
 
@@ -14,11 +15,12 @@ Given $n$ observations, we seek $\hat{\beta}$ such that:
 
 $$\mathbf{y} \approx \mathbf{X}\hat{\beta}$$
 
-The column space $\text{col}(\mathbf{X})$ is a $p$-dimensional subspace of $\mathbb{R}^n$. In general, $\mathbf{y} \notin \text{col}(\mathbf{X})$.
+The column space $\text{col}(\mathbf{X})$ is a $p$-dimensional subspace of $\mathbb{R}^n$.
+In general, $\mathbf{y} \notin \text{col}(\mathbf{X})$.
 
 ## The Geometric Question
 
-Least squares asks: **what point in $\text{col}(\mathbf{X})$ is closest to $\mathbf{y}$?**
+Least squares asks: what point in $\text{col}(\mathbf{X})$ is closest to $\mathbf{y}$?
 
 The answer is the orthogonal projection:
 
@@ -28,8 +30,7 @@ $$\hat{\mathbf{y}} = \mathbf{P}\mathbf{y}, \quad \mathbf{P} = \mathbf{X}(\mathbf
 
 The residual $\mathbf{e} = \mathbf{y} - \mathbf{X}\hat{\beta}$ must be orthogonal to every column of $\mathbf{X}$:
 
-$$\mathbf{X}^T\mathbf{e} = \mathbf{0}
-\implies \mathbf{X}^T\mathbf{y} = \mathbf{X}^T\mathbf{X}\hat{\beta}$$
+$$\mathbf{X}^T\mathbf{e} = \mathbf{0} \implies \mathbf{X}^T\mathbf{y} = \mathbf{X}^T\mathbf{X}\hat{\beta}$$
 
 When $\mathbf{X}^T\mathbf{X}$ is invertible:
 
@@ -37,12 +38,8 @@ $$\hat{\beta} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$$
 
 ## The Pythagorean Decomposition
 
-Because $\hat{\mathbf{y}} \perp \mathbf{e}$:
+Because $\hat{\mathbf{y}} \perp \mathbf{e}$, the Pythagorean theorem gives:
 
 $$\|\mathbf{y}\|^2 = \|\hat{\mathbf{y}}\|^2 + \|\mathbf{e}\|^2$$
 
-This is the Pythagorean theorem in $\mathbb{R}^n$. The $R^2$ statistic is the squared cosine of the angle between $\mathbf{y}$ and $\hat{\mathbf{y}}$.
-
-## Why Collinearity Breaks OLS
-
-When columns of $\mathbf{X}$ are linearly dependent, $\mathbf{X}^T\mathbf{X}$ is singular — the projection is undefined. Ridge regression adds $\lambda\mathbf{I}$ to force invertibility, trading bias for a stable solution.
+The $R^2$ statistic is the squared cosine of the angle between $\mathbf{y}$ and $\hat{\mathbf{y}}$.
