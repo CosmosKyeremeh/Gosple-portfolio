@@ -111,7 +111,7 @@ export default function ContactPage() {
                   <div className="w-9 h-9 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center justify-center text-slate-400 shadow-sm">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <span className="text-sm font-medium tracking-tight">Frimpongggospel75@gmail.com</span>
+                  <span className="text-sm font-medium tracking-tight">borngreatcoszay@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3.5 text-slate-300">
                   <div className="w-9 h-9 rounded-xl bg-slate-900/60 border border-slate-800 flex items-center justify-center text-slate-400 shadow-sm">

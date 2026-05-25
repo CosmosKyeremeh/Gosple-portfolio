@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Email Accessor */}
           {/* <Link
-            href="mailto:frimpongggospel75@gmail.com"
+            href="mailto:borngreatcoszay@gmail.com"
             className="text-slate-600 hover:text-blue-400 hover:drop-shadow-[0_0_6px_rgba(96,165,250,0.3)] transition-all duration-300 transform hover:-translate-y-0.5"
             aria-label="Email"
           >
@@ -93,7 +93,7 @@ export default function Footer() {
           </Link> */}
 
           <a href="
-          mailto:frimpongggospel75@gmail.com"
+          mailto:borngreatcoszay@gmail.com"
             className="text-slate-600 hover:text-blue-400 hover:drop-shadow-[0_0_6px_rgba(96,165,250,0.3)] transition-all duration-300 transform hover:-translate-y-0.5"
             aria-label="Email">
               <Mail className="w-4 h-4" />
