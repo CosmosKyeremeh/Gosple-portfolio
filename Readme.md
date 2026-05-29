@@ -168,7 +168,7 @@ A backend endpoint that performs real mathematical computations — from matrix 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/math-portfolio.git
+git clone https://github.com/cosmoskyeremeh/math-portfolio.git
 cd math-portfolio
 ```
 
@@ -398,9 +398,11 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 ## 👤 Author
 
-**Portfolio Owner** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
+**Frimpong Asamoah Gosple** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
 
-**Built by** — A fellow CS & Engineering student committed to clean architecture, engineering discipline, and building things that actually matter.
+### 👤 Co-Author
+
+**Cosmos** — A fellow CS & Engineering student committed to clean architecture, engineering discipline, and building things that actually matter.
 
 ---
 
