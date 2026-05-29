@@ -1,4 +1,4 @@
-# 🧮 Personal Portfolio Platform
+# 🧮 Mathematical Portfolio Platform
 
 > **"Making thinking visible."**  
 > A modern, interactive portfolio platform that transforms mathematical reasoning into compelling, living demonstrations.
@@ -7,7 +7,7 @@
 
 ## ✨ What This Is
 
-This is a personal portfolio platform built for a **Gospel & Cosmos** whose passion lies in mathematics — not in shipping consumer apps, but in the rigour of algorithms, the elegance of proofs, and the depth of computational thinking.
+This is a personal portfolio platform built for a **Computer Science & Engineering student** whose passion lies in mathematics — not in shipping consumer apps, but in the rigour of algorithms, the elegance of proofs, and the depth of computational thinking.
 
 Rather than hiding that identity behind a generic list of CRUD projects, this platform **leads with it**. Every design and engineering decision is made to make the owner's mathematical thinking visible, credible, and genuinely impressive to recruiters, academics, and peers alike.
 
@@ -15,7 +15,18 @@ Rather than hiding that identity behind a generic list of CRUD projects, this pl
 
 ## 🖥️ Live Demo
 
-> **[Coming Soon]** — Deployed on Vercel
+> **[Live Demo](https://gosple-portfolio.vercel.app)** — Deployed on Vercel
+
+### Preview
+
+<table>
+<tr>
+<td><img src="public/demo-desktop.png" width="400" alt="desktop view"/></td>
+<td><img src="public/demo-mobile.jpeg" width="400" alt="mobile view"/></td>
+</tr>
+</table>
+
+### Desktop + Mobile responsive views
 
 ---
 
@@ -37,7 +48,7 @@ Rather than hiding that identity behind a generic list of CRUD projects, this pl
 
 ## 🏗️ Project Structure
 
-``` bash
+```tree
 math-portfolio/
 │
 ├── app/                        # Next.js App Router
@@ -157,7 +168,7 @@ A backend endpoint that performs real mathematical computations — from matrix 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/CosmosKyeremeh/portfolio.git
+git clone https://github.com/your-username/math-portfolio.git
 cd math-portfolio
 ```
 
@@ -255,8 +266,8 @@ Submit a contact form message.
 
 ```json
 {
-  "name": "Bobe Maxwell",
-  "email": "bobe@example.com",
+  "name": "Jane Doe",
+  "email": "jane@example.com",
   "subject": "Collaboration Opportunity",
   "message": "Hello, I came across your portfolio..."
 }
@@ -387,11 +398,9 @@ MIT License — see [LICENSE](./LICENSE) for details.
 
 ## 👤 Author
 
-**Frimpong Gospel Asamoah** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
+**Portfolio Owner** — BSc. Computer Science & Engineering student with a deep passion for mathematics, algorithms, and analytical problem-solving.
 
-## 👤 Co-Author
-
-**Kyeremeh Cosmos** — BSc. Computer Science & Engineering student
+**Built by** — A fellow CS & Engineering student committed to clean architecture, engineering discipline, and building things that actually matter.
 
 ---
 
